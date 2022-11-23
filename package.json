@@ -1,12 +1,12 @@
 {
   "name": "prisma_demo",
-  "version": "1.0.6",
+  "version": "1.0.12",
   "description": "",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "postinstall": "tsc && PRISMA_VERSION=$(npm info prisma version) && echo \"Generating client using Prisma version $PRISMA_VERSION\" && npx prisma generate"
+    "postinstall": "tsc && cp index.d.ts dist/index.d.ts && PRISMA_VERSION=$(npm info prisma version) && echo \"Generating client using Prisma version $PRISMA_VERSION\" && npx prisma generate"
   },
   "author": "",
   "license": "ISC",
